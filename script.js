@@ -1,9 +1,9 @@
 var isDate = function (input) {
   //   write your code here
-	if (input instanceof Date) {
-    return !isNaN(input.getTime())? 'true' : 'false';;  // Valid if it's not an invalid date
-  }
-	return (/^\d{4}-\d{2}-\d{2}$/.test(input)) ? 'true' : 'false';
+	
+    return !isNaN(Date.parse(input));  // Valid if it's not an invalid date
+  
+  // return (/^\d{4}-\d{2}-\d{2}$/.test(input))
 };
 
 // Do not change the code below.
